@@ -7,20 +7,14 @@ const MyPosts = () => {
         my posts
             <div>
                 new post
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea></textarea>
                 <button> написать</button>
             </div>
 
         <div className={s.posts}>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post message='Hi, how are you?' likeCount='15'/>
+            <Post  message='im fine!' likeCount='20'/>
+
 
 
 
