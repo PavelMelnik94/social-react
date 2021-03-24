@@ -7,12 +7,22 @@ const MyPosts = () => {
         my posts
             <div>
                 new post
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button> написать</button>
             </div>
 
         <div className={s.posts}>
             <Post />
             <Post />
             <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+
+
 
 
          </div>
