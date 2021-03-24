@@ -1,0 +1,13 @@
+.item {
+    color: cornflowerblue;
+    font-size: 25px;
+}
+
+.item img {
+    max-width: 50px;
+}
+
+.test {
+    font-size: 32px;
+}
+

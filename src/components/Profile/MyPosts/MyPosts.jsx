@@ -1,25 +1,23 @@
 import React from 'react';
 import s from './MyPosts.module.css';
+import Post from "./Post/Post";
 
 const MyPosts = () => {
-    return
-        <div>
-            my posts
-        </div>
+    return <div>
+        my posts
+            <div>
+                new post
+            </div>
 
-        <div>
-            new post
-        </div>
+        <div className={s.posts}>
+            <Post />
+            <Post />
+            <Post />
 
-        <div className={s.item}>
-            post 1
-        </div>
 
-        <div className={s.item}>
-            post 2
-        </div>
+         </div>
+    </div>
 
-    
 }
 
 export default MyPosts;
