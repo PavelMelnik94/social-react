@@ -23,6 +23,18 @@ ul li {
     background-color: saddlebrown;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 
+a:hover {
+    color:gray;
+}
+
+a:focus {
+    color: white;
+    text-decoration: none;
+}
 
 
