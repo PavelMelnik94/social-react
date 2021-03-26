@@ -8,29 +8,27 @@ let postData = [
 ];
 
 
+let posts = postData
+    .map(p => <Post message={p.message} likeCount={p.likeCount}/>);
+
 const MyPosts = () => {
     return <div className={s.postsBlock}>
         my posts
-            <div className={s.newPost}>
-                new post
-                <div>
+        <div className={s.newPost}>
+            new post
+            <div>
                 <textarea></textarea>
-                </div>
-                <div>
-                <button> написать</button>
-                </div>
-                <hr/>
             </div>
+            <div>
+                <button> написать</button>
+            </div>
+            <hr/>
+        </div>
 
         <div className={s.posts}>
-            <Post message={postData[0].message} likeCount={postData[0].likeCount}/>
-            <Post message={postData[1].message} likeCount={postData[1].likeCount}/>
+            {posts}
 
-
-
-
-
-         </div>
+        </div>
     </div>
 
 }
