@@ -1,7 +1,3 @@
-ul li {
-    list-style-type: georgian;
-}
-
 
 .app-wrapper {
     display: grid;
@@ -20,7 +16,7 @@ ul li {
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: saddlebrown;
+    background-color: darkslategray;
 }
 
 a {
@@ -32,9 +28,9 @@ a:hover {
     color:gray;
 }
 
-a:focus {
-    color: white;
-    text-decoration: none;
-}
+/*a:focus {*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*}*/
 
 

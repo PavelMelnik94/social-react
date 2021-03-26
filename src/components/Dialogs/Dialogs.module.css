@@ -1,19 +1,29 @@
 .dialogs {
     display: grid;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows:  1fr;
     grid-template-columns: 2fr 10fr;
+    border: 1px solid black;
 }
 
 .dialogItems {
     padding: 10px;
+    border: 1px solid slategray;
 }
 
-.dialogItems .active {
-    color: gold;
-}
+
 
 .dialog {
+    font-weight: normal;
+}
+.active {
+    font-weight: bold;
+    color: hsl(240, 100%, 27%);
+}
 
+
+a.active {
+    font-weight: bold;
+    color: hsl(240, 100%, 27%);
 }
 
 .messages {
