@@ -4,12 +4,11 @@ import {NavLink} from "react-router-dom";
 
 const DialogItem = (props) => {
     return (
-        <div className={s.dialog} >
-            <NavLink  activeClassName={s.active} to={'/dialogs/' + props.id}> {props.name} </NavLink>
+        <div className={s.dialog}>
+            <NavLink activeClassName={s.active} to={'/dialogs/' + props.id}> {props.name} </NavLink>
         </div>
     );
 }
-
 
 const Messages = (props) => {
     return (
@@ -17,32 +16,53 @@ const Messages = (props) => {
     );
 }
 
+
+let dialogsData = [
+    {id: 1, name: 'Dimych'},
+    {id: 2, name: 'Petya'},
+    {id: 3, name: 'Vasia'},
+    {id: 4, name: 'Alexandr'},
+    {id: 5, name: 'Pavel'},
+    {id: 6, name: 'Egor'},
+    {id: 7, name: 'Daniil'},
+    {id: 8, name: 'Oleg'},
+    {id: 9, name: 'Antony'},
+    {id: 10, name: 'Alexey'}
+];
+
+
+let dialogs = dialogsData
+    .map( d => <DialogItem name={d.name} id={d.id}/>);
+
+
+let messages = [
+    {id: 1, message: 'Hellow, orld!'},
+    {id: 2, message: 'hi'},
+    {id: 3, message: 'how are you?'},
+    {id: 4, message: '+453 4534 45786'},
+    {id: 5, message: 'im fine'},
+    {id: 6, message: 'goodbay'},
+    {id: 7, message: 'another day of sunrise'},
+    {id: 8, message: 'fish text'},
+    {id: 9, message: 'lorem 5 words'},
+    {id: 10, message: 'thanks!!!'}
+];
+
+
+let messagesElements = messages
+    .map( m => <Messages text={m.message}/>)
+
+
+
+
 const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogItems}>
-                <DialogItem name='Dimych' id='1'/>
-                <DialogItem name='Petya' id='2'/>
-                <DialogItem name='Vasia' id='3'/>
-                <DialogItem name='Alexandr' id='4'/>
-                <DialogItem name='Pavel' id='5'/>
-                <DialogItem name='Egor' id='6'/>
-                <DialogItem name='Daniil' id='7'/>
-                <DialogItem name='Oleg' id='8'/>
-                <DialogItem name='Antony' id='9'/>
-                <DialogItem name='Alexey' id='10'/>
+                {dialogs}
             </div>
             <div className={s.messages}>
-                <Messages text='Hellow, orld!' />
-                <Messages text='hi' />
-                <Messages text='how are you?' />
-                <Messages text='+453 4534 45786' />
-                <Messages text='im fine' />
-                <Messages text='goodbay' />
-                <Messages text='another day of sunrise' />
-                <Messages text='fish text' />
-                <Messages text='lorem 5 words' />
-                <Messages text='thanks!!!' />
+                {messagesElements}
             </div>
         </div>
     )
