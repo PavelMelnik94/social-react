@@ -42,3 +42,29 @@
 
 
 
+.dialogWindow {
+    background-color: white;
+    width: 96.4%;
+    height: 350px;
+    padding: 15px;
+}
+
+.dialogText {
+    margin-top: 10px;
+    width: 96.3%;
+    height: 50px;
+    outline: none;
+    padding: 15px;
+}
+
+.postTextBtn {
+    background-color: #091921;
+    height: 30px;
+    width: 100px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+    outline: none;
+    cursor: pointer;
+}
