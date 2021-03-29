@@ -1,40 +1,15 @@
-/*
+import {rerenderEntireTree} from "../render";
 
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likeCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state);
+}
 
-let postData = [
-    {id: 1, message: 'пост 1', likeCount: 15},
-    {id: 2, message: 'пост 2', likeCount: 20}
-];
-
-
-let dialogsData = [
-    {id: 1, name: 'Dimych'},
-    {id: 2, name: 'Petya'},
-    {id: 3, name: 'Vasia'},
-    {id: 4, name: 'Alexandr'},
-    {id: 5, name: 'Pavel'},
-    {id: 6, name: 'Egor'},
-    {id: 7, name: 'Daniil'},
-    {id: 8, name: 'Oleg'},
-    {id: 9, name: 'Antony'},
-    {id: 10, name: 'Alexey'}
-];
-
-
-let messagesData = [
-    {id: 1, message: 'Hellow, orld!'},
-    {id: 2, message: 'hi'},
-    {id: 3, message: 'how are you?'},
-    {id: 4, message: '+453 4534 45786'},
-    {id: 5, message: 'im fine'},
-    {id: 6, message: 'goodbay'},
-    {id: 7, message: 'another day of sunrise'},
-    {id: 8, message: 'fish text'},
-    {id: 9, message: 'lorem 5 words'},
-    {id: 10, message: 'thanks!!!'}
-];
-
-*/
 
 let state = {
     profilePage: {

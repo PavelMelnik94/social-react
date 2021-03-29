@@ -17,8 +17,8 @@ let dialogText = () => {
     let dialogs = props.state.dialogs
         .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>);
 
-    /*let messages = props.state.messages
-        .map(m => <Message text={m.message}/>)*/
+    let messages = props.state.messages
+        .map(m => <Message text={m.message}/>)
 
     return (
         <div className={s.dialogs}>
@@ -26,10 +26,10 @@ let dialogText = () => {
                 {dialogs}
             </div>
             <div className={s.messages}>
-                {/*{messages}*/}
 
 
-                <div className={s.dialogWindow}></div>
+
+                <div className={s.dialogWindow}>{messages}</div>
                 <textarea ref={newPost} className={s.dialogText}></textarea>
                 <div>
                     <button onClick={ dialogText } className={s.postTextBtn}>ответить</button>
