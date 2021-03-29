@@ -29,9 +29,8 @@ a:hover {
     color:gray;
 }
 
-/*a:focus {*/
-/*    color: white;*/
-/*    text-decoration: none;*/
-/*}*/
+.settings {
+    padding-top: 15px;
+}
 
 

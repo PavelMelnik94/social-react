@@ -1,0 +1,40 @@
+.dialogItems {
+    padding: 10px;
+    border: 1px solid slategray;
+}
+
+
+
+.dialog {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+}
+
+.avatar {
+    margin-right: 15px;
+    max-height: 45px;
+    border-radius: 100%;
+}
+
+a {
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    font-weight: bold;
+    color: hsl(240, 100%, 27%);
+
+}
+
+
+a.active {
+
+    font-weight: bold;
+    color: hsl(52, 100%, 50%);
+}

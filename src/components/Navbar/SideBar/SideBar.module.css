@@ -1,0 +1,14 @@
+
+.friends {
+    position: inherit;
+    /*margin-top: 50px;*/
+    margin: 20px auto;
+    width: 150px;
+    padding: 5px;
+    height: 50px;
+    border: 1px solid darkred;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

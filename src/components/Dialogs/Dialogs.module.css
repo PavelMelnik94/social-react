@@ -7,27 +7,32 @@
 
 .dialogItems {
     padding: 10px;
-    border: 1px solid slategray;
+    border: 5px solid slategray;
+    display: flex;
+    flex-direction: column;
 }
 
 
 
-.dialog {
-    font-weight: normal;
-}
-.active {
-    font-weight: bold;
-    color: hsl(240, 100%, 27%);
-}
+/*.dialog {*/
+/*    font-weight: normal;*/
+/*    */
+/*}*/
+/*.active {*/
+/*    font-weight: bold;*/
+/*    color: hsl(240, 100%, 27%);*/
+/*}*/
 
 
-a.active {
-    font-weight: bold;
-    color: hsl(240, 100%, 27%);
-}
+/*a.active {*/
+/*    font-weight: bold;*/
+/*    color: hsl(240, 100%, 27%);*/
+/*}*/
 
 .messages {
     padding: 10px;
+
+
 }
 
 

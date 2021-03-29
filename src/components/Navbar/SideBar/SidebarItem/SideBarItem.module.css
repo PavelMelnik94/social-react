@@ -1,0 +1,16 @@
+
+.friendsItem {
+    display: flex;
+    flex-direction: column;
+    color: blue;
+
+}
+
+.avatar {
+    height: 30px;
+    border-radius: 100%;
+}
+
+.active {
+    color:red;
+}

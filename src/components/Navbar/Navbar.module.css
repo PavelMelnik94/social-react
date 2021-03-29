@@ -2,18 +2,42 @@
 .nav {
     grid-area: n;
     background-color: forestgreen;
-    padding: 20px;
+    padding-top: 20px;
+    position: relative;
+
 }
 
 .item {
+    padding: 0 20px;
     color: white;
-}
-
-.active {
-    color: red;
 }
 
 a.active{
     color: gold;
     text-decoration: none;
+}
+
+.settings {
+    padding-top: 15px;
+}
+
+
+.friends {
+    position: inherit;
+    /*margin-top: 50px;*/
+    margin: 50px auto;
+    width: 1fr;
+    padding: 5px;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.friendsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
