@@ -7,14 +7,18 @@ import {updateNewPostText} from "../../../redux/state";
 const MyPosts = (props) => {
 
     let newPost = React.createRef();
-    let onPostChange = () => {
-    updateNewPostText();
+
+
+    let addPost = () => {
+        props.addPost();
+
     }
 
-    let postMessage = () => {
+
+    let onPostChange = () => {
         let text = newPost.current.value;
-        props.addPost(text);
-        updateNewPostText('');
+
+        props.updateNewPostText(text);
 
     }
 
@@ -28,7 +32,7 @@ const MyPosts = (props) => {
                 <textarea className={s.areaPost} onChange={onPostChange} ref={newPost} value={props.newPostText}/>
             </div>
             <div>
-                <button onClick={postMessage}> написать</button>
+                <button onClick={addPost}> написать</button>
             </div>
             <hr/>
         </div>

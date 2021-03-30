@@ -1,22 +1,7 @@
-import {rerenderEntireTree} from "../render";
 
-export let addPost = (postMessage) => {
-    let newPost = {
-        id: 5,
-        message: postMessage,
-        likeCount: 0
-    };
-    state.profilePage.posts.push(newPost);
-    rerenderEntireTree(state);
+let rerenderEntireTree = () => {
+    console.log('state changed');
 }
-
-
-export let updateNewPostText = (newText) => {
-
-    state.profilePage.newPostText = newText;
-    rerenderEntireTree(state);
-}
-
 
 let state = {
     profilePage: {
@@ -59,6 +44,33 @@ let state = {
             {id: 76, name: 'james', avatar: 'https://www.publicdomainpictures.net/pictures/270000/velka/avatar-people-person-business-u.jpg'}]
     }
 };
+
+
+export const addPost = () => {
+    let newPost = {
+        id: 5,
+        message: state.profilePage.newPostText,
+        likeCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newText) => {
+
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+};
+
+
+window.state = state;
+
 
 export default state;
 
