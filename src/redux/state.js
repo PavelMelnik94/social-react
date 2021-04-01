@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-MEW-MESSAGE-BODY';
+const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let store = {
     _state: {
@@ -74,7 +76,8 @@ let store = {
                 {id: 8, message: 'fish text'},
                 {id: 9, message: 'lorem 5 words'},
                 {id: 10, message: 'thanks!!!'}
-            ]
+            ],
+            newMessageBody: ''
         },
         sideBar: {
             friends: [
@@ -119,17 +122,32 @@ let store = {
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
+        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+            this._state.dialogsPage.newMessageBody = action.body;
+            this._callSubscriber(this._state);
+        } else if (action.type ===  SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.newMessageBody = '';
+            this._state.dialogsPage.messages.push({id: 6, message: body,})
+            this._callSubscriber(this._state);
         }
+
+
     }
+
+
 }
 
 
 
-export const addPostActionCreater = () => ({type: ADD_POST})
+export const addPostCreater = () => ({type: ADD_POST});
+export const onPostChangeCreater = (text) =>
+    ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
-export const onPostChangeActionCreater = (text) =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
+export const sendMessageCreater = () => ({type: SEND_MESSAGE});
+export const updateNewMessageBodyCreater = (body) =>
+    ({type: UPDATE_NEW_MESSAGE_BODY, body: body});
 
 
 window.store = store;

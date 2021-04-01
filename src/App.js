@@ -13,7 +13,6 @@ import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 
 
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -23,7 +22,8 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs'
                            render={() => <Dialogs
-                               state={props.state.dialogsPage} />}/>
+                               store={props.store}
+                           />}/>
 
                     <Route path='/profile'
                            render={() =>
