@@ -2,6 +2,8 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 import {addPostCreater, onPostChangeCreater} from "../../../redux/profile-reducer";
+import {updateNewMessageBodyCreater} from "../../../redux/dialogs-reducer";
+import MyPostsContainer from "./MyPostsContainer";
 
 
 const MyPosts = (props) => {
@@ -9,20 +11,18 @@ const MyPosts = (props) => {
     let newPost = React.createRef();
 
 
-    let addPost = () => {
-        props.dispatch(addPostCreater());
+    let onAddPost = () => {
+        props.addPost();
 
     }
 
 
     let onPostChange = () => {
         let text = newPost.current.value;
-
-        props.dispatch(onPostChangeCreater(text));
-
+        props.updateNewPostText(text);
     }
 
-    let postsElements = props.post.map(p => <Post message={p.message} likeCount={p.likeCount}/>);
+    let postsElements = props.posts.map(p => <Post message={p.message} likeCount={p.likeCount}/>);
 
     return <div className={s.postsBlock}>
         my posts
@@ -32,7 +32,7 @@ const MyPosts = (props) => {
                 <textarea className={s.areaPost} onChange={onPostChange} ref={newPost} value={props.newPostText}/>
             </div>
             <div>
-                <button onClick={addPost}> написать</button>
+                <button onClick={ onAddPost}> написать</button>
             </div>
             <hr/>
         </div>
