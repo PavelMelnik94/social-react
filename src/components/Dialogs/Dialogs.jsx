@@ -19,10 +19,10 @@ const Dialogs = (props) => {
     }
 
     let dialogs = state.dialogs
-        .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>);
+        .map(d => <DialogItem key={d.id} name={d.name} id={d.id} avatar={d.avatar}/>);
 
     let messages = state.messages
-        .map(m => <Message text={m.message}/>)
+        .map(m => <Message key={m.id} text={m.message}/>)
 
     let newMessageBody = state.newMessageBody;
 

@@ -1,9 +1,6 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
-import {addPostCreater, onPostChangeCreater} from "../../../redux/profile-reducer";
-import {updateNewMessageBodyCreater} from "../../../redux/dialogs-reducer";
-import MyPostsContainer from "./MyPostsContainer";
 
 
 const MyPosts = (props) => {
@@ -22,7 +19,7 @@ const MyPosts = (props) => {
         props.updateNewPostText(text);
     }
 
-    let postsElements = props.posts.map(p => <Post message={p.message} likeCount={p.likeCount}/>);
+    let postsElements = props.posts.map(p => <Post message={p.message} key={p.id} likeCount={p.likeCount}/>);
 
     return <div className={s.postsBlock}>
         my posts
