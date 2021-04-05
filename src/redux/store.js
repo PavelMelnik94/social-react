@@ -97,7 +97,12 @@ let store = {
                     name: 'james',
                     avatar: 'https://www.publicdomainpictures.net/pictures/270000/velka/avatar-people-person-business-u.jpg'
                 }]
-        }
+        },
+        users: [
+                {id: 1, firstName: 'Pavel', lastName: 'Durov', country: 'unknown', city: 'St-Kitts', mood: 'greetings all!'},
+                {id: 2, firstName: 'Silvestr', lastName: 'Stallone', country: 'Italy', city: 'Castle de la Vega', mood: 'i kill him!'},
+                {id: 3, firstName: 'Pierre', lastName: 'Woodster', country: 'USA', city: 'Los-Angeles', mood: 'i fuck all'}
+            ]
     },
     _callSubscriber() {
         console.log('state changed');

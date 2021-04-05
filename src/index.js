@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {Provider} from "react-redux";
-import state from "./redux/store";
+import state from "./redux/store"; //????
 
 
 
@@ -15,7 +15,7 @@ import state from "./redux/store";
             <App
                 state={state}
                 dispatch={store.dispatch.bind(store)}
-                store={store}
+                /*store={store}*/
             />
             </Provider>
         </React.StrictMode>,
