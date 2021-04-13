@@ -1,5 +1,46 @@
+.users {
+    padding: 25px;
+    display: grid;
+    grid-template-rows: 110px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    " pagination pagination"
+    "user user";
+    align-items: center;
+}
+
+
 .userPhoto {
+    grid-area: user;
     width: 100px;
     height: 100px;
     border-radius: 100%;
 }
+
+.pagination {
+    grid-area: pagination;
+    display: block;
+    margin: 25px auto;
+    max-width: 800px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    display: inline;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+    color: ghostwhite;
+}
+
+.paginationPage {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.selectedPage {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+    color: darkorange;
+}
+
