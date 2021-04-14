@@ -47,6 +47,7 @@
     width: 96.4%;
     height: 350px;
     padding: 15px;
+    overflow: auto;
 }
 
 .dialogText {
