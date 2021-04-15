@@ -1,12 +1,18 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
+
+
+const initialStatePhoto = 'https://www.pikpng.com/pngl/m/36-366441_neko-loli-clipart.png';
 
 let  initialState = {
     posts: [
         {id: 1, message: 'пост 1', likeCount: 15},
         {id: 2, message: 'пост 2', likeCount: 20}
     ],
-    newPostText: 'fish text'
+    newPostText: 'съешь ещё этих мягких французских булок, да выпей чаю',
+    profile: null
+
 };
 
 
@@ -31,6 +37,11 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 newPostText: action.newText
             }
+            case SET_USER_PROFILE:
+            return {
+                ...state,
+                profile: action.profile
+            }
             
         default:
             return state;
@@ -41,6 +52,6 @@ const profileReducer = (state = initialState, action) => {
 export const addPostCreater = () => ({type: ADD_POST});
 export const onPostChangeCreater = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text});
-
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
 export default profileReducer;

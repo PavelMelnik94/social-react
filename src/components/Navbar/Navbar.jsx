@@ -1,14 +1,10 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
-import SideBar from "./SideBar/SideBar";
-
 
 
 const Navbar = (props) => {
-    //
-    // let friend = props.state.sidebar
-    //     .map(d => <SideBarItem name={d.name} id={d.id} avatar={d.avatar}/>);
+
 
     return <nav className={s.nav}>
         <div>
@@ -36,8 +32,7 @@ const Navbar = (props) => {
         </div>
 
 
-
-   {/*     <div >
+        {/*     <div >
             <SideBar friend={props.state.friends}/>
         </div>*/}
 

@@ -9,9 +9,9 @@ const SideBar = (props) => {
 
 
     return (
-            <div className={s.friends}>
-                {friend}
-            </div>
+        <div className={s.friends}>
+            {friend}
+        </div>
     )
 
 }
